@@ -121,7 +121,9 @@ main {
 
 #my-dropdown {
     position: relative;
-    display: inline-block;
+    display: none;
+    top: -20px;
+    right: 20px;
 }
 
 .container {
@@ -132,7 +134,6 @@ main {
     position: absolute;
     background-color: #ffffff;
     box-shadow: 0px 2px 20px 0px rgba(31, 69, 163, 0.5);
-    border-bottom: 4px solid #ffae00;
 }
 
 #new-post-form input[type="text"],
@@ -140,21 +141,13 @@ main {
 #new-post-form button[type="submit"] {
   font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
 }
-
-#new-post-form h3 {
-    display: none;
-    position: absolute;
-    font-size: 30px;
-    font-weight: 300;
-    margin-bottom: 10px;
-  }
   
   #new-post-form h4 {
-    margin: 5px 0 15px;
-    display: none;
-    position: absolute;
-    font-size: 13px;
+    position: relative;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
+    padding-top: 10px;
   }
 
   fieldset {
@@ -274,10 +267,10 @@ main {
     flex-wrap: wrap;
     font-size: 20px;
     width: 100%;
-    padding: 25px;
+    padding: 15px;
     align-items: center;
     justify-content: space-between;
-    border-radius: 50px;
+    border-radius: 100px;
 }
 
 #comment-container.box {
@@ -296,30 +289,31 @@ main {
 
 #comment-container.comments div {
     color: black;
-    background: #ebebeb;
-    margin-top: 20px;
-    padding: 25px 35px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 25px 20px;
     position: relative;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 100px;
+    width: 100%;
 }
 
 #comment-container.comments div span {
     font-size: 15px;
     position: absolute;
     bottom: 0;
-    color: #555;
     right: 15px;
 }
 
 #comment-container.comments div i {
     font-size: 20px;
-    color: #526b7e;
+    color: #ffffff;
     position: absolute;
     right: 15px;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
     transition: all .5s;
-
 }
 
 #comment-container.comments div i:hover {
@@ -328,7 +322,7 @@ main {
 }
 
 #comment-container.box input {
-    width: 70%;
+    width: 100%;
     border: none;
     padding: 15px;
   border-radius:2%
@@ -356,6 +350,7 @@ main {
 
 .like {
     color: #5691c8;
+    display: flex-start;
     transform: scale(1.2);
 }
 
@@ -387,3 +382,8 @@ main {
     }
 } */
 
+.image-footer {
+    height: 50px;
+    width: 50px;
+    display: flex;
+}
