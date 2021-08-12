@@ -41,7 +41,7 @@
                 <b>SnackOverflow</b>
             </button>
             <!-- Dropdown button -->
-            <button id="drop-down-toggle" class="btn btn-outline-success my-2 mx-3 my-sm-0">
+            <button id="drop-down-toggle" class="btn btn-outline-success my-2 mx-3 my-sm-0" onclick="changeForm()">
                 <i class="fas fa-plus"></i>
             </button>
 
@@ -51,8 +51,8 @@
 
                 <!-- Dropdown Content Form -->
                 <div class="container">
-                    <form id="new-post-form" action="" method="post">
-                        <h3>Snack Form</h3>
+                    <form id="new-post-form" action="" method="post" value="show">
+                        </button>
                         <h4>Tell us about your snack!</h4>
                         <fieldset>
                             <textarea name="userName" placeholder="Snack Title" tabindex="1" required></textarea>
@@ -110,9 +110,6 @@
             <div class="card-body">
                 <h5 class="card-title">User title Input Here</h5>
                 <p class="card-text">User form input here. This is a dummy card.</p>
-                <input type="checkbox" id="toggle" class="disabledCheck" />
-                <label for="toggle" class="toggle off">Show</label>
-                <label for="toggle" class="toggle on">Hide</label>
 
                 <section class="comments" id="comment-container">
                     <div class="comment-section">
@@ -133,16 +130,14 @@
                             <button id="add-comment">Add a comment</button>
                         </div>
                     </div>
-                    </section>
+                </section>
             </div>
           </div>
         </div>
     </div>
 </main> 
 
-
-
-    <!-- <footer class="page-footer font-small unique-color-dark pt-4">
+<!-- <footer class="page-footer font-small unique-color-dark pt-4">
             <div class="container">
                 <a class="btn btn-outline-dark" href="https://stackoverflow.com/">
                     <ul class="list-unstyled list-inline text-center">
@@ -150,18 +145,29 @@
                             <h5 class="">Back to work!</h5>
                         </li>
                         <li class="list-inline-item">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Stack_Overflow_icon.svg/768px-Stack_Overflow_icon.svg.png"
-                                alt="stackoverflow icon" />
+                            <img class="image-footer" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Stack_Overflow_icon.svg/768px-Stack_Overflow_icon.svg.png"
+                                alt="stackoverflow icon"/>
                         </li>
                     </ul>
                 </a>
             </div>
          <div class="footer-copyright text-center py-3">© 2021 Copyright:
-            </div>
+         </div>
+        </footer> -->
 
-        </footer>
-        -->
+    <script>
+        
+        function changeForm() {
+            if (document.getElementById("my-dropdown").value === "hide"){
+                document.getElementById("my-dropdown").style.display = "inline-block";
+                document.getElementById("my-dropdown").value = "show";
+            } else {
+                document.getElementById("my-dropdown").style.display = "none";
+                document.getElementById("my-dropdown").value = "hide"
+            }
+        }
 
+    </script>
 
 
 </body>
