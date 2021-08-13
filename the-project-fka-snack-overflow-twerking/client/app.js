@@ -26,7 +26,7 @@ let likeIcon = document.getElementById("like"),
     loveCounter = loveIcon.nextElementSibling,
     comment = document.getElementById("comment"),
     addComment = comment.nextElementSibling,
-    commentsContainer = document.getElementById("comments-container"),
+    commentsContainer = document.getElementById("comment-container"),
     commentCounter = document.getElementById("comment-counter");
 
 likeIcon.addEventListener("click", function () {
@@ -54,8 +54,8 @@ loveIcon.addEventListener("click", function () {
 });
 
 addComment.addEventListener("click", function () {
-    let numberOfComments = Number(commentCounter.textContent),
-        date = new Date();
+    let numberOfComments = Number(commentCounter.textContent);
+       let date = new Date();
     numberOfComments++;
     commentCounter.textContent = numberOfComments;
     commentsContainer.style.display = "block";
@@ -65,7 +65,7 @@ addComment.addEventListener("click", function () {
             <i class="fa fa-trash"></i>
          </div>`;
     comment.value = "";
-    let deleteIcons = document.querySelectorAll(".container .comments div i");
+    let deleteIcons = document.querySelectorAll(".container.comments div i");
     for (let i = 0; i < deleteIcons.length; i++) {
         deleteIcons[i].addEventListener("click", function () {
             this.parentElement.style.display = "none";
