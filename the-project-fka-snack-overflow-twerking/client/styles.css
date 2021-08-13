@@ -68,7 +68,7 @@ nav {
 }
 
 main {
-    margin-top: 70px;
+    margin-top: 85px;
 }
 
 /* 3a) Animated Navbar Icon */
@@ -222,9 +222,6 @@ main {
   :-ms-input-placeholder {
     color: #888;
   }
-
-
-
   
   /* box to show gif results */
   .gifBox {
@@ -261,55 +258,47 @@ main {
   
 /* 5a) Comment Systems */
 #comment-container {
-    background: #ffa640;
+    background: #ffffff;
     color: rgb(0, 0, 0);
     display: flex;
     flex-wrap: wrap;
     font-size: 20px;
     width: 100%;
-    padding: 15px;
+    padding: 5px;
     align-items: center;
     justify-content: space-between;
-    border-radius: 100px;
+    border-radius: 10px;
 }
 
-#comment-container.box {
-    width: 10%;
-}
-
-#comment-container.box:last-of-type {
-    width: calc(100% - 30%);
-    display: flex;
+#comment-container.box div {
+    display: inline-block;
     justify-content: space-between;
 }
 
-#comment-container.comments {
+#comment-container.comment-box {
     width: 100%;
 }
 
 #comment-container.comments div {
-    color: black;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 25px 20px;
+    color: rgb(0, 0, 0);
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px 20px;
     position: relative;
     align-items: center;
     justify-content: space-between;
-    border-radius: 100px;
+    border-radius: none;
     width: 100%;
 }
 
 #comment-container.comments div span {
     font-size: 15px;
-    position: absolute;
-    bottom: 0;
-    right: 15px;
-}
+} 
 
-#comment-container.comments div i {
+#comment-container.comments div i  {
     font-size: 20px;
-    color: #ffffff;
-    position: absolute;
-    right: 15px;
+    color: #202020;
+    right: 25px;
+    padding-right: 50px;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
@@ -317,15 +306,15 @@ main {
 }
 
 #comment-container.comments div i:hover {
-    color: #293d4d;
+    color: #ff8800;
     transform: translateY(-50%) scale(1.3);
 }
 
 #comment-container.box input {
     width: 100%;
     border: none;
-    padding: 15px;
-  border-radius:2%
+    padding: 5px;
+    border-radius:2%
 }
 
 #comment-container.box button {
@@ -348,13 +337,13 @@ main {
     font-size: 23px;
 }
 
-.like {
+.like:active {
     color: #5691c8;
     display: flex-start;
     transform: scale(1.2);
 }
 
-.love {
+.love:active {
     color: #c31432;
     transform: scale(1.2);
 }
@@ -382,8 +371,10 @@ main {
     }
 } */
 
+/*
 .image-footer {
     height: 50px;
     width: 50px;
     display: flex;
 }
+*/
